@@ -10,9 +10,14 @@ translations = {
     "dog": "犬"
 }
 
-word = input("Enter an English word: ").lower()
+while True:
+    word = input("Enter an English word (or type exit): ").lower()
 
-if word in translations:
-    print("Japanese:", translations[word])
-else:
-    print("Sorry, I don't know that word yet.")
+    if word == "exit":
+        print("Goodbye!")
+        break
+
+    if word in translations:
+        print("Japanese:", translations[word])
+    else:
+        print("Sorry, I don't know that word.")
