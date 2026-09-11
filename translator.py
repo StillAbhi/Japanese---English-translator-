@@ -117,15 +117,21 @@ translations = {
     "love": "愛する",
     "help": "助ける",
     "know": "知る",
-    "understand": "理解する"
-}
-
-
-# Create Japanese → English dictionary
-reverse_translations = {
-    japanese: english
-    for english, japanese in translations.items()
-}
+"i am hungry": "お腹が空きました",
+"i am tired": "疲れました",
+"i am happy": "嬉しいです",
+"i am going home": "家に帰ります",
+"i am going to school": "学校に行きます",
+"what are you doing": "何をしていますか",
+"how are you": "元気ですか",
+"what is your name": "あなたの名前は何ですか",
+"nice to meet you": "はじめまして",
+"i don't understand": "分かりません",
+"please help me": "助けてください",
+"where are you": "どこにいますか",
+"what time is it": "今何時ですか",
+"see you tomorrow": "また明日",
+"have a good day": "良い一日を"}
 
 
 while True:
