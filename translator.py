@@ -150,18 +150,40 @@ while True:
         text = input("Enter English word or sentence: ").lower()
 
         if text in translations:
-            print("Japanese:", translations[text])
+    print("Japanese:", translations[text])
+
+elif text.startswith("i like "):
+    thing = text[7:]
+    if thing in translations:
+        print("Japanese:", "私は" + translations[thing] + "が好きです")
+    else:
+        print("Japanese:", "私は" + thing + "が好きです")
+
+elif text.startswith("i want "):
+    thing = text[7:]
+    if thing in translations:
+        print("Japanese:", "私は" + translations[thing] + "が欲しいです")
+    else:
+        print("Japanese:", "私は" + thing + "が欲しいです")
+
+elif text.startswith("i am going to "):
+    place = text[14:]
+    if place in translations:
+        print("Japanese:", "私は" + translations[place] + "に行きます")
+    else:
+        print("Japanese:", "私は" + place + "に行きます")
+
+else:
+    words = text.split()
+    result = []
+
+    for word in words:
+        if word in translations:
+            result.append(translations[word])
         else:
-            words = text.split()
-            result = []
+            result.append("[" + word + "]")
 
-            for word in words:
-                if word in translations:
-                    result.append(translations[word])
-                else:
-                    result.append("[" + word + "]")
-
-            print("Japanese:", " ".join(result))
+    print("Japanese:", " ".join(result))
 
     elif choice == "2":
         text = input("Enter Japanese word or sentence: ")
